@@ -26,12 +26,12 @@ container{
 container > button{
   background-color: rgb(45, 105, 169);
 }
-button:hover{
+#addButton:hover{
   background: #fff;
   color: #339DFF;
   box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
 }
-button{
+#addButton{
   background: #339DFF;
   color: #fff;
   /* font-size: 13px; */
