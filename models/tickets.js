@@ -2,19 +2,16 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 //used to createa  modoel and organice things
-const movieSchema = new Schema({
-  title: String,
-  relaseYear: Number,
-  mpaaRating: String,
-  cast: [String],
-  nowShowing: Boolean
-  
+const ticketSchema = new Schema({
+  description: String,
+  severity: String,
+  assignedTo: String, 
 },{
   timestamp: true
 })
 
-const Movie = mongoose.model('Movie', movieSchema)
+const Ticket = mongoose.model('Ticket', ticketSchema)
 
 export {
-  Movie
+  Ticket
 }

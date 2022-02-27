@@ -7,8 +7,8 @@ import logger from 'morgan'
 import('./database/mongooseDatabase.js')
 
 //import routers
-import { router as indexRouter } from './routes/index.js'
-import { router as  mainpageRouter } from './routes/mainpage.js'
+import { router as indexRouter } from './routes/routersOfIndex.js'
+import { router as  mainpageRouter } from './routes/routersOfMainpage.js'
 const app = express();
 
 
@@ -29,17 +29,17 @@ app.use(
   )
 )
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    next(createError(404))
-  })
+// app.use(function (req, res, next) {
+//     next(createError(404))
+//   })
   
 app.listen(3000)
-app.get('/', (req,res) =>{
-    res.send(`testing if server runs`)
-})
+// app.get('/login', (req,res) =>{
+//     res.render('./tickets/index')
+// })
 
-app.use('/', indexRouter)
-app.use('/movies', mainpageRouter)
+app.use('/login', indexRouter)
+app.use('tickets/mainpageFront', mainpageRouter)
 // error handler
 app.use(function (err, req, res, next) {
     // set locals, only providing error in development
