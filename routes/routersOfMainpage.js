@@ -6,6 +6,9 @@ const router = Router()
 router.get('/', ticketsCtrl.index)
 router.post('/', ticketsCtrl.index)
 
+router.get('/mainpageFront', (req,res) =>{
+  res.send('hello')
+})
 
 export {
   router

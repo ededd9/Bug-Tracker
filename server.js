@@ -28,15 +28,18 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.get('/mainpageFront', (req,res) =>{
+    res.send('main')
+})
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
 //     next(createError(404))
 //   })
   
-app.listen(3000)
-// app.get('/login', (req,res) =>{
-//     res.render('./tickets/index')
-// })
+app.listen(3000 , ()=>{
+    console.log('app is listening on port ' + 3000);
+})
+
 
 app.use('/login', indexRouter)
 app.use('tickets/mainpageFront', mainpageRouter)
@@ -48,7 +51,7 @@ app.use(function (err, req, res, next) {
   
     // render the error page
     res.status(err.status || 500)
-    res.render('error')
+    res.render('Error')
   })
   
   export {
