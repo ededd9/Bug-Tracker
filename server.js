@@ -29,7 +29,7 @@ app.use(
   )
 )
 app.get('/mainpageFront', (req,res) =>{
-    res.send('main')
+    res.render('mainpageFront')
 })
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
