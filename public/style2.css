@@ -19,6 +19,7 @@ container {
 container > button {
   background-color: rgb(45, 105, 169);
 }
+
 button:hover {
   background: #fff;
   color: #339dff;
