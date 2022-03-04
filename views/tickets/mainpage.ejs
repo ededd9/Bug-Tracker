@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Bug Tracker</title>
+  </head>
+  <body>
+    <section class="sidebar">
+      <div class="sidebar-container">
+        <div class="logo-welcome">
+          <img
+            class="logo"
+            src="https://img.icons8.com/small/96/000000/query-inner-join-right.png"
+          />
+          <h2 class="welcome">Welcome back, [User]</h2>
+        </div>
+        <hr />
+        <ul>
+          <li class="dashboard">
+            <img src="https://img.icons8.com/ios/48/000000/flow-chart.png" />
+            <h3 class="align">Dashboard</h3>
+          </li>
+          <hr />
+          <li class="tickets">
+            <img
+              src="https://img.icons8.com/material/48/000000/check--v1.png"
+            />
+            <h3 class="align">Tickets</h3>
+          </li>
+          <hr />
+          <li class="user">
+            <img
+              src="https://img.icons8.com/material/48/000000/guest-male--v1.png"
+            />
+            <h3 class="align">Profile</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ticketModal-hidden">
+      <container> 
+        <div> 
+        <h1>Add New Issue:</h3>
+        <h3> Description</h1>
+        <input type="text" placeholder="Describe the issue" class="description">
+        <h3> Severity</h3>
+        <!-- <form class="severity"> -->
+        <select name="severity" class="severity-level" >
+          <option value="low">low</option>
+          <option value="meduim">meduim</option>
+          <option value="sevier">servier</option>
+        </select>
+        <!-- </form> -->
+        <h3> Assigned to</h3>
+        <input type="text" placeholder="Enter responsible" class="assigned-to"> 
+        </br>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="add-ticket" type="button">Add</button>
+          </div>
+        </div>
+      </container> 
+    </section>
+    <button class="addTicket">Create Ticket</button>
+    <section class="ticketsTable">
+      <div class="ticketTable-container">
+        <h1><%= text %></h1>
+</div>
+    </section>
+    <script defer src="main.js"></script>
+  </body>
+</html>
