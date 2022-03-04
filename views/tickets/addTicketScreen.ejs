@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>addTicketScreen</title>
+</head>
+<body>       <container> 
+          <div> 
+          <h1>Add New Issue:</h3>
+          <h3> Description</h1>
+          <input type="text" placeholder="Describe the issue" class="description">
+          <h3> Severity</h3>
+          <!-- <form class="severity"> -->
+          <select name="severity" class="severity-level" >
+            <option value="low">low</option>
+            <option value="meduim">meduim</option>
+            <option value="sevier">servier</option>
+          </select>
+          <!-- </form> -->
+          <h3> Assigned to</h3>
+          <input type="text" placeholder="Enter responsible" class="assigned-to"> 
+          </br>
+          <div class="d-grid gap-2 d-md-block">
+            <button class="add-ticket" type="button">Add</button>
+            </div>
+          </div>
+        </container> 
+</body>
+</html>
