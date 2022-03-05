@@ -82,10 +82,9 @@ ul :hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 18.5em;
+  margin-left: 25em;
   margin-top: 1.5em;
   height: 95vh;
-  width: 60vw;
-  background: red;
-  border-radius: 15px;
+  width: 75vw;
+  background: white;
 }

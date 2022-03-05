@@ -9,17 +9,7 @@ const severity = document.querySelector('.severity-level');
 const department = document.querySelector('.assigned-to');
 //ticket table
 const ticketTable = document.querySelector('ticketTable-container');
-// console.log(
-//   ticketForm,
-//   addTicket,
-//   ticketTable,
-//   severity,
-//   assignedToValue,
-//   ticketTable
-// );
-let tktDescriptionArr = [];
-let tktSeverityArr = [];
-let tktDepartmentArr = [];
+
 addTicket.addEventListener('click', () => {
   let nameDescription = describeValue.value;
   tktDescriptionArr.push(nameDescription);
@@ -28,15 +18,3 @@ addTicket.addEventListener('click', () => {
   let departmentAssignedTo = department.value;
   tktDepartmentArr.push(departmentAssignedTo);
 });
-
-// class ticket {
-//   #date;
-//   #id;
-//   constructor(name, severity, department) {
-//     this.name = name;
-//     this.severity = severity;
-//     this.department = department;
-//   }
-
-//   grabInfo() {}
-// }

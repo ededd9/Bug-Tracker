@@ -8,7 +8,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image:linear-gradient(to right, var(--secondarycolor), var(--primarycolor));
+  background-image: linear-gradient(
+    to right,
+    var(--secondarycolor),
+    var(--primarycolor)
+  );
 }
 .login-container {
   display: flex;
@@ -17,17 +21,17 @@ body {
   background: var(--primarycolor);
   height: 250px;
   width: 400px;
-  margin-top:200px;
+  margin-top: 200px;
   border-radius: 15px;
-  box-shadow:0px 5px 20px 0px;
+  box-shadow: 0px 5px 20px 0px;
 }
 .login-btn {
   background: #339dff;
   border-radius: 5px;
-  height:30px;
-  width:60px;
-  margin-top:20px;
-  margin-left:10px;
+  height: 30px;
+  width: 60px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 .username {
   background-image: url('https://img.icons8.com/windows/32/000000/user-secured.png');
@@ -38,8 +42,8 @@ body {
 .password {
   background-image: url('https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-password-internet-security-those-icons-fill-those-icons-6.png');
   background-repeat: no-repeat;
-  background-position:right;
-  background-size:10%;
+  background-position: right;
+  background-size: 10%;
 }
 .login-field {
   display: flex;
@@ -51,5 +55,5 @@ body {
   margin: 10px;
   height: 35px;
   font-size: 15px;
-  width:300px;
+  width: 300px;
 }

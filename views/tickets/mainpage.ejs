@@ -48,36 +48,22 @@
         </ul>
       </div>
     </section>
-
-    <section class="ticketModal-hidden">
-      <container> 
-        <div> 
-        <h1>Add New Issue:</h3>
-        <h3> Description</h1>
-        <input type="text" placeholder="Describe the issue" class="description">
-        <h3> Severity</h3>
-        <!-- <form class="severity"> -->
-        <select name="severity" class="severity-level" >
-          <option value="low">low</option>
-          <option value="meduim">meduim</option>
-          <option value="sevier">servier</option>
-        </select>
-        <!-- </form> -->
-        <h3> Assigned to</h3>
-        <input type="text" placeholder="Enter responsible" class="assigned-to"> 
-        </br>
-        <div class="d-grid gap-2 d-md-block">
-          <button class="add-ticket" type="button">Add</button>
-          </div>
-        </div>
-      </container> 
-    </section>
-    <button class="addTicket">Create Ticket</button>
-    <section class="ticketsTable">
+    <section>
       <div class="ticketTable-container">
-        <h1><%= text %></h1>
-</div>
+        <table class="ticketTable">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Severity</th>
+              <th>Assigned</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tr></tr>
+        </table>
+      </div>
     </section>
+
     <script defer src="main.js"></script>
   </body>
 </html>
