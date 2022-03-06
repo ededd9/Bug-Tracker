@@ -32,12 +32,13 @@
             <h3 class="align">Dashboard</h3>
           </li>
           <hr />
-          <li class="tickets">
+          <a><li class="tickets">
             <img
               src="https://img.icons8.com/material/48/000000/check--v1.png"
             />
             <h3 class="align">Tickets</h3>
           </li>
+        </a>
           <hr />
           <li class="user">
             <img
@@ -45,6 +46,7 @@
             />
             <h3 class="align">Profile</h3>
           </li>
+          <button onclick="window.location.href='addTicketScreen'" type="submit">Add Ticket</a>
         </ul>
       </div>
     </section>
@@ -53,13 +55,22 @@
         <table class="ticketTable">
           <thead>
             <tr>
-              <th>Description</th>
+              <th>Department</th>
+              <th>Subject</th>
               <th>Severity</th>
-              <th>Assigned</th>
-              <th></th>
+              <th>Description</th>
+              <tr/>
+            </thead>
+              <tr>
+              <% tickets.forEach(ticket => { %>
+                <td> <%= ticket.department %></td>
+                <td> <%= ticket.subject%></td>
+                <td> <%= ticket.severity %></td>
+                <td> <%= ticket.description %></td>
+                
+              </tr>
+              <%}) %>
             </tr>
-          </thead>
-          <tr></tr>
         </table>
       </div>
     </section>
