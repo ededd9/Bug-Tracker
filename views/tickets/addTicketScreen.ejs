@@ -20,7 +20,7 @@
       <div class="newIssueDiv">
         <button onclick="history.back()" class="newIssue-backbutton">←</button>
         <h1>Add New Issue:</h1>
-        <form method="post" action="/tickets">
+        <form method="post" action="mainpage">
           <div>
             <h3>Department</h3>
             <select name="department" class="departments">
@@ -34,7 +34,7 @@
           </div>
           <div>
             <h3>Subject</h3>
-            <input type="text" placeholder="" name="subject" />
+            <input required type="text" placeholder="" name="subject" />
           </div>
           <div>
             <h3>Severity</h3>
@@ -54,7 +54,7 @@
             <textarea required name="description" id="description"></textarea>
           </div>
           <br />
-          <button class="add-ticket" type="button">Save</button>
+          <button class="add-ticket" type="submit">Save</button>
         </form>
       </div>
     </container>
