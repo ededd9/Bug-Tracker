@@ -12,6 +12,7 @@
 }
 body {
   background: var(--secondarycolor);
+  display: flex;
 }
 
 .sidebar-container {
@@ -69,4 +70,20 @@ ul :hover {
   background: var(--thirdcolor);
   border-radius: 10px;
   cursor: pointer;
+}
+.addTicket {
+  height: 50px;
+  width: 50px;
+  margin-left: 400px;
+}
+
+.ticketTable-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25em;
+  margin-top: 1.5em;
+  height: 95vh;
+  width: 75vw;
+  background: white;
 }

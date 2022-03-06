@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>addTicketScreen</title>
+  </head>
+  <body>
+    <%- include('partials/sidebar') %>
+    <container class="newIssue-container">
+      <div class="newIssueDiv">
+        <button onclick="history.back()" class="newIssue-backbutton">←</button>
+        <h1>Add New Issue:</h1>
+        <form method="post" action="mainpage">
+          <div>
+            <h3>Department</h3>
+            <select name="department" class="departments">
+              <option value="" selected disabled hidden>
+                Select a department
+              </option>
+              <option value="IT">IT</option>
+              <option value="HR">HR</option>
+              <option value="Account">Account</option>
+            </select>
+          </div>
+          <div>
+            <h3>Subject</h3>
+            <input required type="text" placeholder="" name="subject" />
+          </div>
+          <div>
+            <h3>Severity</h3>
+            <!-- <form class="severity"> -->
+            <select name="severity" class="severity-level">
+              <option value="" selected disabled hidden>
+                Choose severity of issue
+              </option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="severe">Severe</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label for="description">Description</label>
+            <textarea required name="description" id="description"></textarea>
+          </div>
+          <br />
+          <button class="add-ticket" type="submit">Save</button>
+        </form>
+      </div>
+    </container>
+  </body>
+</html>

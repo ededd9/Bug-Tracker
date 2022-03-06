@@ -1,0 +1,53 @@
+.newIssue-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+  margin-left: 20em;
+  margin-top: 10em;
+  background-color: rgb(228, 228, 228);
+  height: 70vh;
+  width: 82vw;
+}
+
+button:hover {
+  background: #fff;
+  color: #339dff;
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+button {
+  background: #339dff;
+  color: #fff;
+  line-height: 38px;
+  border-radius: 5px;
+  width: 90px;
+}
+input {
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+}
+select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+}
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  height: 100px;
+}
+.newIssue-backbutton {
+  background: var(--secondarycolor);
+}
+.newIssueDiv {
+  padding: 1em;
+
+  width: 800px;
+}
