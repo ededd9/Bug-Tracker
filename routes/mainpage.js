@@ -1,9 +1,12 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express'
+import * as ticketCtrl from '../controller/tickets.js'
+const router = Router();
 // const Ticket = require('./models/tickets')
 
-router.get('/', (req,res) =>{
-    res.render('tickets/mainpage')
-})
+router.get('/',ticketCtrl.index)
+router.get('/addnewticket',ticketCtrl.new)
+router.post('/newindex',ticketCtrl.create)
 
-module.exports = router;
+export{
+    router
+}

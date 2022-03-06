@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 
 const ticketSchema = new Schema({
@@ -8,4 +8,8 @@ const ticketSchema = new Schema({
   description: String,
 });
 
-module.exports = mongoose.model('Ticket', ticketSchema);
+// module.exports = mongoose.model('Ticket', ticketSchema);
+const Ticket = mongoose.model('Ticket', ticketSchema)
+export{
+  Ticket
+}

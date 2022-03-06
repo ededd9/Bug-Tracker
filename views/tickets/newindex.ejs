@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<main> 
+ 
+  <table>
+     <a href="/tickets/addnewticket"></a>
+  <tr>
+    <%= title %> 
+
+
+    <th>department</th>
+    <th>Severity</th>
+    <th>Assigned</th>
+    <th>discriptions</th>
+    <th></th>
+  </tr>
+  <h1><% title %> </h1>
+  <% tickets.forEach((ticket) => {%> 
+    <td><%= ticket.department %> </td>
+    <td><%= ticket.subject %> </td>
+    <td><%= ticket.severity%> </td>
+    <td><%=ticket.description %> </td>
+<% })%> 
+</tr>
+
+</table>
+</main>
+
+
+</body>
+</html>
+
