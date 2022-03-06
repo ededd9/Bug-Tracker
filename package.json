@@ -1,7 +1,6 @@
 {
   "name": "bug-tracker-v1",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "type": "module",
   "dependencies": {
@@ -204,5 +203,6 @@
   "homepage": "https://github.com/ededd9/Bug-Tracker#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "description": ""
 }
