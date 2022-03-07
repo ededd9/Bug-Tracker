@@ -1,32 +1,16 @@
+const { render } = require('ejs');
 const express = require('express');
 const Ticket = require('../models/tickets');
 const router = express.Router();
-
-
+const mainpageController = require('../controllers/mainTicketController');
+router.use(express.urlencoded({ extended: true }));
 //render mainpage with each ticket from mongoDb
-router.get('/', (req, res) => {
-  Ticket.find({}, function (err, tickets) {
-    res.render('tickets/mainpage', {
-      tickets,
-    });
-  });
-});
+router.get('/', mainpageController.mainpage);
+router.post('/', mainpageController.mainpage_post_ticket);
+
 //create new ticket function
-router.post('/', async function (req, res) {
-  //defining Tickets properties
-  let newTicket = new Ticket({
-    department: req.body.department,
-    subject: req.body.subject,
-    severity: req.body.severity,
-    description: req.body.description,
-  });
-  try {
-    Ticket = await newTicket.save();
-    res.render('tickets/mainpage');
-  } catch (e) {
-    console.log(e);
-    res.redirect('/mainpage');
-  }
-});
+router.get('/:id', mainpageController.mainpage_get_Ticket);
+
+router.delete('/:id', mainpageController.mainpage_ticketDel);
 
 module.exports = router;
