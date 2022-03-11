@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<%- include('partials/head') %>
+  <body>
+    <%- include('partials/sidebar') %>
+    <div class="content">
+      <p><%= ticket.department %></p>
+      <p><%= ticket.subject %></p>
+      <p><%= ticket.severity %></p>
+      <p><%= ticket.description %></p>
+    </div>
+  </body>
+</html>
