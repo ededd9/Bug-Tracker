@@ -32,7 +32,8 @@
             <h3 class="align">Dashboard</h3>
           </li>
           <hr />
-          <a><li class="tickets">
+          <a href="/mainpage">
+          <li class="tickets">
             <img
               src="https://img.icons8.com/material/48/000000/check--v1.png"
             />
@@ -46,35 +47,58 @@
             />
             <h3 class="align">Profile</h3>
           </li>
-          <button onclick="window.location.href='addTicketScreen'" type="submit">Add Ticket</a>
+          <button onclick="window.location.href='/mainpage/newTicket'" type="submit">Add Ticket</a>
         </ul>
       </div>
     </section>
     <section>
       <div class="ticketTable-container">
         <table class="ticketTable">
-          <thead>
+          <thead class="table-headers">
             <tr>
               <th>Department</th>
               <th>Subject</th>
               <th>Severity</th>
               <th>Description</th>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Actions</th>
               <tr/>
             </thead>
+            <tbody>
               <tr>
-              <% tickets.forEach(ticket => { %>
+              <% tickets.forEach((ticket) => { %>
                 <td> <%= ticket.department %></td>
                 <td> <%= ticket.subject%></td>
                 <td> <%= ticket.severity %></td>
                 <td> <%= ticket.description %></td>
-                
+                <td> <%= ticket._id %> </td>
+                <td> <%= ticket.createdAt.toLocaleDateString() %></td>
+                <td>
+                  <div class="btn-group">
+                    <a href="mainpage/<%= ticket._id %>">
+                  <button class="view-button row-btn">V</button>
+                </a>
+                <a href="/mainpage/editTicket/<%= ticket._id %>">
+                  <button class="edit-button row-btn">E</button>
+                </a>
+                <form action="mainpage/<%= ticket._id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="delete-button row-btn">D</button>
+                </form>
+                </div>
+                </td>
+             
               </tr>
+              
               <%}) %>
+            </tbody>
             </tr>
-        </table>
+          
+          </table>
       </div>
     </section>
 
     <script defer src="main.js"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
